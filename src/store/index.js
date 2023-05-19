@@ -1,12 +1,9 @@
+import { createSlice, configureStore } from "@reduxjs/toolkit";
 
-import { createSlice, configureStore } from '@reduxjs/toolkit';
-
-
-import bootModal from './modal';
-
+import bootModal from "./modal";
 
 const store = configureStore({
-  reducer: {   Bmodal: bootModal } ,
+  reducer: { Bmodal: bootModal },
 });
 
 //const store = createStore(authReducer);

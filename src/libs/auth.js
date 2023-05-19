@@ -38,16 +38,16 @@ const login = async (formdata) => {
           id: userData.id,
           is_buyer: userData.is_buyer,
           is_seller: userData.is_seller,
-          profile_image:userData.profile_image,
-          verified_at:userData.verified_at,
-          cover_image:userData?.cover_image
+          profile_image: userData.profile_image,
+          verified_at: userData.verified_at,
+          cover_image: userData?.cover_image,
         })
       );
 
-      if(sessionStorage.getItem("redirect")){
+      if (sessionStorage.getItem("redirect")) {
         window.location.pathname = sessionStorage.getItem("url");
         sessionStorage.removeItem("redirect");
-        sessionStorage.removeItem("url")
+        sessionStorage.removeItem("url");
       }
     }
     return response.data;

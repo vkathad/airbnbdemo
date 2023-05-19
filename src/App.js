@@ -17,24 +17,22 @@ import LoginForm from "./components/LoginForm";
 import { useDispatch } from "react-redux";
 import { modalActions } from "./store/modal";
 
-
-
 function App() {
   const dispatch = useDispatch();
   // <LandingPage></LandingPage>
   return (
     <>
-    {/* <Extra></Extra> */}
-     <div className="container  mx-auto px-20 py-4   " onClick={() => {
-             dispatch(modalActions.hideHeader());
-            console.log('app.js file call dispatch')
-        }}>
-       <Headers></Headers>
-       <GridCom></GridCom>
-  
-
-       </div>
-       
+      {/* <Extra></Extra> */}
+      <div
+        className="container  mx-auto px-20 py-4   "
+        onClick={() => {
+          dispatch(modalActions.hideHeader());
+          console.log("app.js file call dispatch");
+        }}
+      >
+        <Headers></Headers>
+        <GridCom></GridCom>
+      </div>
     </>
   );
 }

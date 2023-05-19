@@ -9,41 +9,40 @@ export default function HeaderButton() {
   const secondMenu = useSelector((state) => state.Bmodal.headerMenu);
   // const [secondMenu,SetSecondMenu] =useState(false)
 
-
   const handlerAnyWhere = () => {
     // SetSecondMenu(true)
-     dispatch(modalActions.showHeader());
-   }
-
-
-
+    dispatch(modalActions.showHeader());
+  };
 
   if (secondMenu) {
-
-    return (
-      <HeaderTab></HeaderTab>
-    )
-
+    return <HeaderTab></HeaderTab>;
   } else {
-
     return (
       <>
-        <div className="inline-flex rounded-3xl border-spacing-1" role="group" onClick={e => {
-          // do not close modal if anything inside modal content is clicked
-          e.stopPropagation();
-        }} >
-          <button onClick={handlerAnyWhere}
-            type="button" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100  dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+        <div
+          className="inline-flex rounded-3xl border-spacing-1"
+          role="group"
+          onClick={(e) => {
+            // do not close modal if anything inside modal content is clicked
+            e.stopPropagation();
+          }}
+        >
+          <button
+            onClick={handlerAnyWhere}
+            type="button"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100  dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
           >
             AnyWhere
           </button>
-          <button onClick={handlerAnyWhere}
+          <button
+            onClick={handlerAnyWhere}
             type="button"
             className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100  dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
           >
             AnyWeek
           </button>
-          <button onClick={handlerAnyWhere}
+          <button
+            onClick={handlerAnyWhere}
             type="button"
             className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100  dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
           >
@@ -66,7 +65,5 @@ export default function HeaderButton() {
         </div>
       </>
     );
-
   }
-
 }

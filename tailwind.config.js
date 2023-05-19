@@ -2,22 +2,17 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     container: {
       center: true,
     },
     extend: {
-    
       fontFamily: {
-        'sans': ['Helvetica', 'Arial', 'sans-serif'],
-        
+        sans: ["Helvetica", "Arial", "sans-serif"],
       },
     },
   },
-  plugins: [
-      require('flowbite/plugin')
-  ]
-}
-
+  plugins: [require("flowbite/plugin")],
+};

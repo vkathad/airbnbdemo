@@ -1,7 +1,7 @@
-export function Layouts(){
-    function buttonclick() {}
-    return  (
-        <>
+export function Layouts() {
+  function buttonclick() {}
+  return (
+    <>
       <div className="container">
         <div>
           <div className="relative">
@@ -97,5 +97,5 @@ export function Layouts(){
         </div>
       </div>
     </>
-    )
+  );
 }

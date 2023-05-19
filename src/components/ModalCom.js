@@ -21,9 +21,7 @@ export default function ModalCom(props) {
         className="delay-200"
       >
         <Modal.Header />
-        <Modal.Body>
-          {props.children}
-        </Modal.Body>
+        <Modal.Body>{props.children}</Modal.Body>
       </Modal>
     </React.Fragment>
   );
